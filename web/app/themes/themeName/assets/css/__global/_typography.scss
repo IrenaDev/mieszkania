@@ -1,0 +1,68 @@
+// Base global styles moved to theme.json
+
+// Headings //
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	&:only-child {
+		margin-bottom: 0;
+	}
+}
+
+h1 {
+	@include media('>=md') {
+		@include font(49, 73.5)
+	}
+}
+
+h2 {
+	@include media('>=md') {
+		@include font(40, 60);
+	}
+}
+
+// Main Elements //
+a {
+	img {
+		border: 0;
+	}
+}
+
+p {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+strong {
+	font-weight: bolder;
+}
+
+.page-content ul:not([class]),
+.acf-block ul:not([class]),
+.editor-rich-text ul,
+ol {
+	ul,
+	ol {
+		margin: 0;
+	}
+}
+
+hr {
+	box-sizing: content-box;
+
+	height: 0;
+
+	margin-top: rem($margin-mobile);
+	margin-bottom: rem($margin-mobile);
+
+	border-top: 1px solid $color--text;
+
+	@include media('>=md') {
+		margin-top: rem($margin);
+		margin-bottom: rem($margin);
+	}
+}

@@ -1,0 +1,15 @@
+@import '__settings/init';
+.slider {
+	&__header {
+		text-align:center;
+		margin:0 0 rem(48);
+	}
+	&__container {
+		max-width: 480px;
+
+		margin: 0 auto;
+	}
+}
+.custom-slide {
+	text-align:center;
+}

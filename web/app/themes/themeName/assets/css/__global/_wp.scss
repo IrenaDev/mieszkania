@@ -1,0 +1,79 @@
+.wp-caption {
+	width: auto !important;
+	figure {
+		width: auto !important;
+
+		margin: 0;
+	}
+}
+
+.alignleft,
+.wp-block-image .alignleft {
+	float: left;
+	margin: 0 $media-margin $media-margin 0;
+}
+
+.alignright,
+.wp-block-image .alignright {
+	float: right;
+	margin: 0 0 $media-margin $media-margin;
+}
+
+.alignnone,
+.wp-block-image .alignnone {
+	display: inline-block;
+
+	max-width: 100%;
+}
+
+.aligncenter,
+.wp-block-image .aligncenter {
+	clear: both;
+
+	margin: $media-margin auto;
+
+	text-align: center;
+}
+
+.has-text-uppercase {
+	text-transform: uppercase;
+}
+
+.is-content-justification {
+	&-top-center {
+		align-items: flex-start;
+		justify-content: center;
+	}
+	&-top-left {
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	&-top-right {
+		align-items: flex-start;
+		justify-content: flex-end;
+	}
+	&-center-center {
+		align-items: center;
+		justify-content: center;
+	}
+	&-center-left {
+		align-items: center;
+		justify-content: flex-start;
+	}
+	&-center-right {
+		align-items: center;
+		justify-content: flex-end;
+	}
+	&-bottom-center {
+		align-items: flex-end;
+		justify-content: center;
+	}
+	&-bottom-left {
+		align-items: flex-end;
+		justify-content: flex-start;
+	}
+	&-bottom-right {
+		align-items: flex-end;
+		justify-content: flex-end;
+	}
+}

@@ -1,0 +1,16 @@
+@import '__settings/init';
+.splide {
+	padding: 0 rem(50) rem(40);
+	&__pagination__page {
+		background: $color--dark;
+		&.is-active {
+			background: $color--primary;
+		}
+	}
+	&__arrow--next {
+		right: 0;
+	}
+	&__arrow--prev {
+		left:0;
+	}
+}

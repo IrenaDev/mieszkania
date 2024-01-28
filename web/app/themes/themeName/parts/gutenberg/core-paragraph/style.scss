@@ -1,0 +1,31 @@
+@import '__settings/init';
+
+/* Text Elements */
+p {
+	&.is-style-uppercase {
+		text-transform: uppercase;
+	}
+
+	&.is-style-preheading {
+		color: $color--secondary;
+		text-transform: uppercase;
+	}
+	&.is-style-subheading {
+		margin-bottom: rem(24);
+
+		font-weight: 600;
+		color: $color--primary;
+		letter-spacing: rem(1.2);
+		text-transform: uppercase;
+
+		@include font(16, 24);
+	}
+	&.is-style-leadparagraph {
+		font-weight: 700;
+
+		@include font(16, 24);
+		@include media('>=md') {
+			@include font(18, 27);
+		}
+	}
+}

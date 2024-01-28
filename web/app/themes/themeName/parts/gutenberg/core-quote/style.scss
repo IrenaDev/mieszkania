@@ -1,0 +1,19 @@
+@import '__settings/init';
+.wp-block-quote {
+	border-color: $color--secondary;
+	cite {
+		color: $color--text;
+	}
+	&.is-style-default {
+		font-size: rem(18);
+		line-height: 1.5;
+	}
+	&.is-style-large {
+		p {
+			margin-bottom: rem(10);
+		}
+		cite {
+			color: $color--secondary;
+		}
+	}
+}

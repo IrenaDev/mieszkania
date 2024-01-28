@@ -1,0 +1,82 @@
+{
+  "name": "roots/bedrock",
+  "repositories": [
+    {
+        "type": "path",
+        "url": "plugins/*/*",
+        "options": {
+            "symlink": false
+        }
+    },
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type":"composer",
+      "url":"https://connect.advancedcustomfields.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4||^8.0",
+    "composer/installers": "^2.1",
+    "kint-php/kint": "*",
+    "filp/whoops": "*",
+    "vlucas/phpdotenv": "^5.4",
+    "oscarotero/env": "^2.1",
+    "roots/wp-config": "1.0.0",
+    "roots/wp-password-bcrypt": "1.1.0",
+    "roots/wordpress": "^6.0",
+    "roots/wordpress-no-content": "^6.0",
+    "wpengine/advanced-custom-fields-pro": "^6.0.6",
+    "wpackagist-plugin/regenerate-thumbnails": "*",
+    "wpackagist-plugin/safe-svg": "*",
+    "wpackagist-plugin/duplicate-post": "*",
+    "wpackagist-plugin/ewww-image-optimizer": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/all-in-one-wp-security-and-firewall": "*",
+    "all-in-one-wp-security-and-firewall-premium/all-in-one-wp-security-and-firewall-premium": "^1.0.2",
+    "wpackagist-theme/twentytwentythree": "^1.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.5.4",
+    "roave/security-advisories": "dev-master",
+    "wp-cli/wp-cli": "^2.0",
+    "wp-cli/db-command": "^2.0",
+    "wp-cli/search-replace-command": "^2.0",
+    "wp-cli/rewrite-command": "^2.0",
+    "wp-cli/core-command": "^2.0",
+    "wp-cli/extension-command": "^2.0",
+    "wp-cli/entity-command": "^2.0",
+    "wp-cli/wp-cli-tests": "^3.1",
+    "wp-cli/media-command": "^2.0"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "allow-plugins": {
+      "roots/wordpress-core-installer": true,
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "test": [
+      "phpcs"
+    ]
+  }
+}

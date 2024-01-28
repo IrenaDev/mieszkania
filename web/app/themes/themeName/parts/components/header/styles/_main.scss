@@ -1,0 +1,148 @@
+.main-header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 0 rem(20);
+
+	position: relative;
+
+	border-bottom: 1px solid $color--text;
+	background: $color--light;
+	&__logo {
+		flex: 0 0 auto;
+
+		max-width: 100px;
+		padding: rem(15) 0;
+	}
+	&__nav {
+		@include media('<md') {
+			display: none;
+		}
+		@include media('>=md') {
+			display: block;
+			flex: 0 0 auto;
+
+			max-width: calc(100% - 100px);
+		}
+	}
+	&__desktop-nav,
+	&__mobile-nav {
+		padding: 0;
+
+		z-index: 9;
+
+		text-align: center;
+
+		@include font(18, 20);
+	}
+
+	&__mobile {
+		@include media('<md') {
+			padding: rem(30) 0;
+
+			position: absolute;
+			top: 100%;
+			right: 0;
+			left: 0;
+
+			border-bottom: 1px solid $color--text;
+			background: $color--light;
+		}
+		@include media('>=md') {
+			display: none;
+		}
+	}
+	.menu-item {
+		display: block;
+
+		position: relative;
+		margin: 0 rem(7.5);
+
+		@include media('>=md') {
+			display: inline-block;
+
+			padding: rem(15) 0;
+		}
+
+		> a {
+			vertical-align: middle;
+
+			color: currentColor;
+
+			@include media('<md') {
+				display: inline-block;
+
+				margin: rem(10) 0;
+			}
+		}
+		& + & {
+			@include media('>=md') {
+				margin-left: rem(32);
+			}
+		}
+		&__dropdown {
+			width: rem(30);
+			height: rem(30);
+			padding: 0;
+
+			position: relative;
+			margin: 0 0 0 rem(5);
+			vertical-align: middle;
+
+			border: 0;
+			border-radius: 50%;
+			background: transparent;
+		}
+		&__icon {
+			display: block;
+
+			width: 0;
+			height: 0;
+
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+
+			border-width: rem(8) rem(6) 0 rem(6);
+			border-style: solid;
+			border-color: currentColor transparent transparent transparent;
+		}
+		&__submenu {
+			.menu-item {
+				padding: 0;
+
+				margin: 0 0 rem(10);
+				&:last-child {
+					margin: 0;
+				}
+			}
+		}
+	}
+	.menu > .menu-item > .menu-item__submenu {
+		@include media('<md') {
+			padding: rem(20) 0;
+
+			border-top: 1px solid currentColor;
+			border-bottom: 1px solid currentColor;
+		}
+		@include media('>=md') {
+			width: auto;
+			min-width: 200px;
+			padding: rem(10) rem(20);
+
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translate(-50%, 0);
+
+			border: 1px solid currentColor;
+			background: $color--light;
+		}
+		.menu-item__submenu {
+			padding: rem(10) 0;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "cta",
+	"title": "CTA",
+	"category": "theme_blocks",
+	"description": "cta",
+	"keywords": [ "cta", "content" ],
+	"textdomain": "themeName",
+	"supports": {
+		"mode": false,
+		"align": false,
+		"anchor": true,
+		"alignText": true,
+		"alignContent": "matrix",
+		"jsx": true
+	},
+	"icon": "media-interactive",
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "index.php"
+	}
+}

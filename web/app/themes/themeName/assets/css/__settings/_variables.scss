@@ -1,0 +1,66 @@
+//* BREAKPOINTS *//
+$breakpoints: (xs: 375px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, max: 1920px);
+
+//* CONTAINER width variables *//
+$container-mobile: 720px;
+$container-lg: 960px;
+$container-xl: 1080px;
+$container-xxl: var(--wp--style--global--wide-size); // theme.json settings.layout
+$container-padding:  15; //theme.json setting.custom.basePadding
+
+//* FONTS *//
+$font-base: var(--wp--preset--font-family--base-font); //theme.json setting.typography.fontFamilies
+
+
+$font-size-desktop: var(--wp--preset--font-size--medium);//theme.json setting.typography.fontSizes
+$line-height-desktop: 1.5;
+
+// Set Mobile font-size / line-height styles in theme.json styles.typography
+
+//* SPACINGS *//
+
+// Block Spacings
+$spacing-mobile: 40; //theme.json setting.spacing.spacingSizes
+$spacing: var(--wp--preset--spacing--medium);
+
+$margin-mobile: 30; //theme.json setting.spacing.spacingSizes
+$margin: var(--wp--preset--spacing--medium);
+
+// Media Spacing
+$media-margin: var(--wp--custom--media-spacing); //theme.json setting.custom.mediaSpacing; //px
+
+//* COLORS *//
+
+// Base Colors
+$color--dark: var(--wp--preset--color--dark); //theme.json setting.color
+$color--light: var(--wp--preset--color--light); //theme.json setting.color
+
+// Main Colors
+$color--primary: var(--wp--preset--color--primary); //theme.json setting.color
+$color--secondary: var(--wp--preset--color--secondary); //theme.json setting.color
+
+// Other Colors
+$color--1: var(--wp--preset--color--color-1); //theme.json setting.color
+$color--2: var(--wp--preset--color--color-2); //theme.json setting.color
+$color--3: var(--wp--preset--color--color-3); //theme.json setting.color
+$color--4: var(--wp--preset--color--color-4); //theme.json setting.color
+
+// Elements Colors
+$color--bg: var(--wp--preset--color--bg); //theme.json setting.color
+$color--body: $color--light;
+$color--border: $color--dark;
+
+// Theme Text Colors
+$color--text: $color--dark;
+$color--text-light: $color--light;
+$color--link: $color--primary;
+$color--link-hover: $color--dark;
+
+//* OTHER *//
+
+// Transitions
+$trans-speed: var(--transition-speed);
+$trans-func: var(--transition-timing-function);
+
+// Outline
+$outline: 2px solid blue;

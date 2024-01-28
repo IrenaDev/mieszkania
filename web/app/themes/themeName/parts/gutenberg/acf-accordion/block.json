@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "accordion",
+	"title": "Accordion",
+	"category": "theme_blocks",
+	"description": "accordion",
+	"keywords": [ "accordion", "content" ],
+	"textdomain": "themeName",
+	"supports": {
+		"align": false,
+		"anchor": true,
+		"alignContent": false
+	},
+	"viewScript": ["acf-accordion" ],
+	"editorScript": ["acf", "acf-accordion" ],
+	"icon": "welcome-widgets-menus",
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "index.php"
+	}
+}

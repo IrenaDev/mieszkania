@@ -1,0 +1,51 @@
+.screen-reader-text,
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+
+	position: absolute !important;
+	margin: -1px !important;
+
+	white-space: nowrap !important;
+
+	border: 0 !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+}
+a.skip-link {
+	width: 1px;
+	height: 1px;
+
+	position: absolute;
+	z-index: -999;
+	top: auto;
+	left: -999px;
+
+	overflow: hidden;
+}
+a.skip-link:focus,
+a.skip-link:active {
+	width: 150px;
+	height: auto;
+	padding: 5px;
+
+	z-index: 999;
+	top: 20px;
+	left: 20px;
+	margin: 0;
+
+	font-size: rem(16);
+	text-align: center;
+	color: #FFF;
+
+	border: 2px solid yellow;
+	border-radius: 8px;
+	background-color: #000;
+	overflow: auto;
+}
+
+[hidden] {
+	display: none;
+}

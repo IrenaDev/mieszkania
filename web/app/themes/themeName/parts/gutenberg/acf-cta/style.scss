@@ -1,0 +1,21 @@
+@import '__settings/init';
+
+.cta {
+	min-height: 400px;
+
+	background: $color--3;
+	background-color: $color--3;
+
+	@include media('>=md') {
+		min-height: 600px;
+	}
+	&__content {
+		flex: 0 0 100%;
+
+		max-width: 600px;
+		padding: 0 rem(20);
+		*:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

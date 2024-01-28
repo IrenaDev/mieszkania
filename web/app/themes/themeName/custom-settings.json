@@ -1,0 +1,40 @@
+{
+	"jquery" : false,
+	"block_library" : true,
+	"theme_settings_pages": {
+		"header": {
+			"page_title": "Theme Header Settings",
+			"menu_title": "Header"
+		},
+		"footer": {
+			"page_title": "Theme Footer Settings",
+			"menu_title": "Footer"
+		},
+		"404_page": {
+			"page_title": "Theme 404 page Settings",
+			"menu_title": "404 Page"
+		}
+	},
+	"gutenberg_categories": [
+		[
+			"theme_blocks",
+			"Theme Blocks",
+			"star-filled"
+		]
+	],
+	"menus": {
+		"navigation": "Navigation",
+		"foot_navigation": "Footer"
+	},
+	"register_scripts": {
+		"splide": "/assets/js/plugins/splide.min.js"
+	},
+	"thumbnails": [
+		[
+			"slider-img",
+			380,
+			380,
+			false
+		]
+	]
+}

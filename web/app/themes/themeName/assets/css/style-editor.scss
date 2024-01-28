@@ -1,0 +1,37 @@
+@import '__settings/init';
+@import '__admin-editor/init';
+@import '__global/init';
+@import '../../parts/gutenberg/core-heading/style.scss';
+@import '../../parts/gutenberg/core-paragraph/style.scss';
+@import '../../parts/gutenberg/core-list/style.scss';
+@import '../../parts/gutenberg/core-button/style.scss';
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.block-editor-block-list__layout {
+	.block-editor-block-list__block {
+		table {
+			width: calc(100% - 2px);
+		}
+	}
+}
+
+.block-library-list ol {
+	padding-left: 0;
+
+	margin-left: 0;
+}
+
+[data-type^='acf/'],
+[data-type^='custom/'] {
+	max-width: 100% !important;
+}
+
+.editor-styles-wrapper select,
+[id*='acf-block_'] {
+	max-width: none !important;
+}

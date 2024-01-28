@@ -1,0 +1,61 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/**/*-[0-9]*[0-9]x[0-9]*[0-9].*
+!web/app/uploads/.gitkeep
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor/
+
+# Modules
+node_modules/
+
+# WP-CLI
+wp-cli.local.yml
+
+# Themes & Filepacks
+web/app/themes/**/bundle*.js
+web/app/themes/*/css/style.css
+web/app/themes/*/css/style-editor.css
+web/app/themes/*/css/style-admin.css
+web/app/themes/*/css/style-login.css
+web/app/themes/*/css/style*.css
+web/app/themes/*/css/**/style*.css
+web/app/themes/**/css/admin/**/*.css
+web/app/themes/*/js/lib/**/*.css
+web/*pack.zip
+
+# Other
+*.log
+.DS_Store
+Thumbs.db
+thumbs.db
+.idea/
+.phpintel
+.history/
+.vscode/
+web/app/advanced-cache.php
+web/app/cache/db/
+web/app/cache/minify/
+web/app/db.php
+web/app/w3tc-config/master.php
+web/app/aiowps_backups/
+web/app/ai1wm-backups/
+web/app/uploads/aios/
+# CI/CD
+dist
+
+# No test temp files.
+/backstop_data/bitmaps_test
+/backstop_data/html_report

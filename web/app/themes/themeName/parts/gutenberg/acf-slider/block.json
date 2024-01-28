@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "slider",
+	"title": "Slider",
+	"category": "theme_blocks",
+	"description": "slider",
+	"keywords": [ "slider" ],
+	"textdomain": "themeName",
+	"supports": {
+		"align": false,
+		"anchor": true
+	},
+	"viewScript": ["splide", "acf-slider" ],
+	"editorScript": ["acf", "splide", "acf-slider" ],
+	"icon": "welcome-view-site",
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "index.php"
+	}
+}

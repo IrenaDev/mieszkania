@@ -1,0 +1,32 @@
+@import '__settings/init';
+
+// Buttons styles
+.wp-block-buttons {
+	margin: rem(40) auto;
+	&.aligncenter {
+		justify-content: center;
+	}
+}
+
+.wp-block-button {
+	&__link {
+		min-width: 150px;
+
+		color: #FFF;
+
+		background: $color--link;
+
+		&:hover, &:focus {
+			color: #FFF;
+
+			opacity: .8;
+		}
+	}
+	&.is-style-outline {
+		.wp-block-button__link {
+			color: currentColor;
+
+			border-color: $color--link;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.block-spacing {
+	&--pt {
+		padding-top: rem($spacing-mobile);
+
+		@include media('>=md') {
+			padding-top: $spacing;
+		}
+	}
+	&--pb {
+		padding-bottom: rem($spacing-mobile);
+
+		@include media('>=md') {
+			padding-bottom: $spacing;
+		}
+	}
+	&--mt {
+		margin-top: rem($margin-mobile);
+
+		@include media('>=md') {
+			margin-top: $margin;
+		}
+	}
+	&--mb {
+		margin-bottom: rem($margin-mobile);
+
+		@include media('>=md') {
+			margin-bottom: $margin;
+		}
+	}
+}
